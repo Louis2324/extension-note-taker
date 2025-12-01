@@ -78,15 +78,6 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-## Roadmap
-- [ ] Basic note capture
-- [ ] Chrome storage integration
-- [ ] Rich text editing
-- [ ] Advanced search filters
-- [ ] Markdown support
-- [ ] Cloud backup options
-- [ ] Mobile browser support
-
 ## Related Projects
 Check out other extensions in the Web Extension Pack:
 - [Website Theme Switcher](https://github.com/Louis2324/extension-theme-switcher) - Change website themes on the fly
