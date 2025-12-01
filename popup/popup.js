@@ -5,6 +5,20 @@ document.addEventListener("DOMContentLoaded", () => {
   const saveButton = sel("saveNote");
   const currentPageSpan = sel("currentPage");
   const notesList = sel("notesList");
+  const themeToggle = sel("themeToggle");
+
+  chrome.storage.local.get(["theme"], function (result) {
+    if (result.theme == "dark") {
+      document.body.classList.add("dark-mode");
+      themeToggle.textContent = "☀️";
+    }
+  });
+
+  themeToggle.addEventListener("click", () => {
+    const isDark = document.body.classList.toggle("dark-mode");
+    themeToggle.textContent = isDark ? "☀️" : "🌙";
+    chrome.storage.local.set({ theme: isDark ? "dark" : "light" });
+  });
 
   chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
     if (tabs[0]) {
@@ -87,7 +101,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  
   function deleteNote(noteId) {
     if (confirm("Delete this note?")) {
       chrome.storage.local.get(["notes"], function (result) {
