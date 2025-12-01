@@ -108,4 +108,4 @@ For support, feature requests, or bug reports:
 
 **Part of the Web Extension Pack** – A collection of browser extensions built to learn, experiment, and publish on the Chrome Web Store.
 
-*Built with ❤️ by [Louis2324](https://github.com/Louis2324)*
+*Built  by [Louis2324](https://github.com/Louis2324)*
